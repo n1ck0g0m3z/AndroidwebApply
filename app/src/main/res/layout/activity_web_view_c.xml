@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" tools:context=".WebViewC" android:background="#ffffff">
+
+    <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/activity_main_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight = "2"></WebView>
+
+        <!--<Button android:id="@+id/dummy_button" style="?metaButtonBarButtonStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Emergency Call (3回タップ)"
+            android:gravity="center"
+            android:height="90dp"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:background="@drawable/effect" />-->
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Angel Eye-エンジェルアイ-</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function emergency(){ 
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth()+1;
+		var year = date.getFullYear();
+		var hour = date.getHours()+":"+date.getMinutes();
+		var today = year+"-"+month+"-"+day+" "+hour;
+		Android.emergencyCall(today);
+	}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <nav id="top_nav">
+      <ul>
+        <li class="states"><a href="states.html"><img src="img/common/icon_states.png" alt="states"></a></li>
+        <li class="logo"><a href="index.html"><img src="img/common/logo.png" alt="logo"></a></li>
+        <li class="tel"><a onClick="Android.call()"><img src="img/common/icon_tel.png" alt="tel"></a></li>
+      </ul>
+    </nav>
+    <nav id="globalNav">
+      <ul>
+        <li><a href="index.html"><img src="img/common/icon_home.png" alt="ステータス"><br>
+          ステータス</a></li>
+        <li><a href="message.html"><img src="img/common/icon_message.png" alt="メッセージ"><br>
+          メッセージ</a></li>
+        <li><a href="map.html"><img src="img/common/icon_map.png" alt="マップ"><br>
+          マップ</a></li>
+        <li><a href="mypage.html"><img src="img/common/icon_mypage.png" alt="マイページ"><br>
+          マイページ</a></li>
+        <li><a href="mail.html" target="_blank"><img src="img/common/icon_mail.png" alt="出勤報告"><br>
+          出勤報告</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--//header-->
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/opacity-rollover2.1.js"></script>
+  <div id="contents">
+    <div class="states_customer">
+      <div class="box">
+        <p class="name">会員番号：1234<span>鈴木 大地 様</span></p>
+      </div>
+      <div id="rank_customer">
+        <form action="" id="" method="post" name="rank">
+          <select name="rank" id="" class="">
+            <option value="0" selected disabled>ランク</option>
+            <option value="1">S</option>
+            <option value="2">A</option>
+            <option value="3">B</option>
+            <option value="4">C</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <!--//states_customer-->
+    <div class="box table">
+      <h3>鈴木大地様の履歴</h3>
+      <table class="table_horizon">
+        <tr>
+          <th scope="col">日付</th>
+          <th width="20%" scope="col">コース</th>
+          <th width="20%" scope="col">指名</th>
+        </tr>
+        <tr>
+          <td nowrap>2014/10/1<br></td>
+          <td class="cen">60</td>
+          <td nowrap class="cen">10,000円</td>
+        </tr>
+        <tr>
+          <td nowrap>2014/10/3<br></td>
+          <td class="cen">80</td>
+          <td nowrap class="cen">12,000円</td>
+        </tr>
+        <tr>
+          <td nowrap>2014/10/9<br></td>
+          <td class="cen">60</td>
+          <td nowrap class="cen">10,000円</td>
+        </tr>
+        <tr>
+          <td nowrap>2014/10/15<br></td>
+          <td class="cen">60</td>
+          <td nowrap class="cen">10,000円</td>
+        </tr>
+      </table>
+    </div>
+    <div class="memo">
+      <div class="box">
+        <h3>今日までの給料明細</h3>
+        <p>マグネットをコレクションしている方は世界中に数多くいるようです。コレクション対象となるマグネットは、ただの磁石ではありません。詳細を説明すると、石膏やポリ、プラスチックやゴムなどでできた様々な種類の造形物に、マグネットが付いており、金属板などに貼り付けて飾ることのできる物を指します。観光地などでは、観光名所の風景や建造物を模した物などもあります。とにかくジャンルが多いのがマグネットコレクションのいいところで、造形技術としてもかなり優れた物も数多く存在しています。中には限定品などで入手困難な物もあり、高値で売買されることもあります。</p>
+      </div>
+      <div class="btn_edit"><a href="edit_memo.html">修正する</a></div>
+    </div>
+    <div class="memo">
+      <div class="box">
+        <h3>今日までの給料明細</h3>
+        <p>マグネットをコレクションしている方は世界中に数多くいるようです。コレクション対象となるマグネットは、ただの磁石ではありません。詳細を説明すると、石膏やポリ、プラスチックやゴムなどでできた様々な種類の造形物に、マグネットが付いており、金属板などに貼り付けて飾ることのできる物を指します。観光地などでは、観光名所の風景や建造物を模した物などもあります。とにかくジャンルが多いのがマグネットコレクションのいいところで、造形技術としてもかなり優れた物も数多く存在しています。中には限定品などで入手困難な物もあり、高値で売買されることもあります。</p>
+      </div>
+      <div class="btn_edit"><a href="edit_memo.html">修正する</a></div>
+    </div>
+  </div>
+  <!--//contents-->
+</div>
+<!--/wrapper-->
+<div id="emergency"><a onClick="emergency()">Emergency Call (3回タップ)</a></div>
+</body>
+</html>

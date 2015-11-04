@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Angel Eye-エンジェルアイ-</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function emergency(){ 
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth()+1;
+		var year = date.getFullYear();
+		var hour = date.getHours()+":"+date.getMinutes();
+		var today = year+"-"+month+"-"+day+" "+hour;
+		Android.emergencyCall(today);
+	}
+function logout(){
+	Android.logOut();
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <nav id="top_nav">
+      <ul>
+        <li class="states"><a href="states.html"><img src="img/common/icon_states.png" alt="states"></a></li>
+        <li class="logo"><a href="index.html"><img src="img/common/logo.png" alt="logo"></a></li>
+        <li class="tel"><a onClick="Android.call()"><img src="img/common/icon_tel.png" alt="tel"></a></li>
+      </ul>
+    </nav>
+    <nav id="globalNav">
+      <ul>
+        <li><a href="index.html"><img src="img/common/icon_home.png" alt="ステータス"><br>
+          ステータス</a></li>
+        <li><a href="message.html"><img src="img/common/icon_message.png" alt="メッセージ"><br>
+          メッセージ</a></li>
+        <li><a href="map.html"><img src="img/common/icon_map.png" alt="マップ"><br>
+          マップ</a></li>
+        <li><a href="mypage.html"><img src="img/common/icon_mypage.png" alt="マイページ"><br>
+          マイページ</a></li>
+        <li><a href="mail.html" target="_blank"><img src="img/common/icon_mail.png" alt="出勤報告"><br>
+          出勤報告</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--//header-->
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/opacity-rollover2.1.js"></script>
+  <div id="contents">
+  <h2>設定変更</h2>
+    <div class="box">
+      <form action="" method="post">
+        <div class="set">
+          <h4>位置情報設定</h4>
+          <label>
+            <input name="gps" type="radio" id="gps_0" value="1">
+            位置情報を通知する</label>
+          <label>
+            <input name="gps" type="radio" id="gps_1" value="2" checked>
+            位置情報を通知しない</label>
+          <br>
+          <input name="time" type="text" value="{$time}" size="2" maxlength="2">
+          時間後に自動的にオフ </div>
+        <div class="set">
+          <h4>シャワー</h4>
+          <label>
+            <input type="radio" name="gps" value="1" id="gps_0">
+            する</label>
+          <label>
+            <input name="gps" type="radio" id="gps_1" value="2" checked>
+            しない</label>
+          <br>
+          プレイ終了
+          <input name="time" type="text" value="{$time}" size="2" maxlength="2">
+          分前にアラーム<br>
+          <span class="sample">(0分前でプレイ終了時にアラーム)</span> </div>
+        <div class="set">
+          <h4>プレイ終了時に再度通知</h4>
+          <label>
+            <input type="radio" name="gps" value="1" id="gps_0">
+            する</label>
+          <label>
+            <input name="gps" type="radio" id="gps_1" value="2" checked>
+            しない</label>
+          <br>
+        </div>
+        <div class="set">
+          <h4>ステータスボタンとタイマー連動</h4>
+          <label>
+            <input type="radio" name="gps" value="1" id="gps_0">
+            する</label>
+          <label>
+            <input name="gps" type="radio" id="gps_1" value="2" checked>
+            しない</label>
+          <br>
+        </div>
+        <div class="set">
+          <h4>名前</h4>
+          <input type="text" name="name" id="name" value="{$name}" class="wm">
+        </div>
+        <div class="set">
+          <h4>メールアドレス</h4>
+          <input name="mail" type="text" value="{$mail}" class="wm" id="mail">
+        </div>
+        <div class="btn_center"> <a href="#" class="btn">設定する</a> </div>
+        <div class="btn_center"> <a href="#" class="btn" onClick="logout()">ログアウト</a> </div>
+      </form>
+    </div>
+  </div>
+  <!--//contents-->
+</div>
+<!--/wrapper-->
+<div id="emergency"><a onClick="emergency()">Emergency Call (3回タップ)</a></div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Angel Eye-エンジェルアイ-</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function emergency(){ 
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth()+1;
+		var year = date.getFullYear();
+		var hour = date.getHours()+":"+date.getMinutes();
+		var today = year+"-"+month+"-"+day+" "+hour;
+		Android.emergencyCall(today);
+	}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <nav id="top_nav">
+      <ul>
+        <li class="states"><a href="states.html"><img src="img/common/icon_states.png" alt="states"></a></li>
+        <li class="logo"><a href="index.html"><img src="img/common/logo.png" alt="logo"></a></li>
+        <li class="tel"><a onClick="Android.call()"><img src="img/common/icon_tel.png" alt="tel"></a></li>
+      </ul>
+    </nav>
+    <nav id="globalNav">
+      <ul>
+        <li><a href="index.html"><img src="img/common/icon_home.png" alt="ステータス"><br>
+          ステータス</a></li>
+        <li><a href="message.html"><img src="img/common/icon_message.png" alt="メッセージ"><br>
+          メッセージ</a></li>
+        <li><a href="map.html"><img src="img/common/icon_map.png" alt="マップ"><br>
+          マップ</a></li>
+        <li><a href="mypage.html"><img src="img/common/icon_mypage.png" alt="マイページ"><br>
+          マイページ</a></li>
+        <li><a href="mail.html" target="_blank"><img src="img/common/icon_mail.png" alt="出勤報告"><br>
+          出勤報告</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--//header-->
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/opacity-rollover2.1.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+  <div id="contents">
+    <div id="datepicker"></div>
+    <div class="box">
+    <h3>2014年10月12日のお客様</h3>
+      <table class="table_horizon">
+      <tr>
+        <th nowrap></th>
+        <th colspan="2" nowrap>会員様</th>
+        <th nowrap>コース</th>
+        <th nowrap>指名 </th>
+        <th nowrap>パック </th>
+      </tr>
+
+      <tr>
+        <td rowspan="2" class="cen">1</td>
+        <td colspan="2">NO.1234</td>
+        <td rowspan="2" align="right" class="cen">60</td>
+        <td rowspan="2" align="right">1,000円</td>
+        <td rowspan="2" align="right">10,000円</td>
+      </tr>
+      <tr>
+        <td colspan="2">高橋    大地様</td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="cen">2</td>
+        <td colspan="2">NO.2345</td>
+        <td rowspan="2" align="right" class="cen">80</td>
+        <td rowspan="2" align="right">0円</td>
+        <td rowspan="2" align="right">12,000円</td>
+      </tr>
+      <tr>
+        <td colspan="2">鈴木 翔太様</td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="cen">3</td>
+        <td colspan="2">NO.3456</td>
+        <td rowspan="2" align="right" class="cen">60</td>
+        <td rowspan="2" align="right">2,000円</td>
+        <td rowspan="2" align="right">10,000円</td>
+      </tr>
+      <tr>
+        <td colspan="2">中村 悠真様</td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="cen">4</td>
+        <td colspan="2">NO.4567</td>
+        <td rowspan="2" align="right" class="cen">60</td>
+        <td rowspan="2" align="right">2,000円</td>
+        <td rowspan="2" align="right">10,000円</td>
+      </tr>
+      <tr>
+        <td colspan="2">森 湊様</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="3"></td>
+        <td></td>
+        <th nowrap>雑費 </th>
+        <td align="right">△1000 </td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+        <td></td>
+        <th nowrap>合計 </th>
+        <td align="right">¥46,000</td>
+      </tr>
+      </tfoot>
+    </table>
+    </div>
+    <div class="box">
+    <h3>今日までの給料明細</h3>
+    <table class="table_horizon">
+      <tr>
+        <th colspan="2" rowspan="2" nowrap>月別のお給料</th>
+        <th colspan="2" rowspan="2" nowrap>お給料</th>
+        <th rowspan="2" nowrap>出勤日数</th>
+        <th nowrap>接客数</th>
+      </tr>
+      <tr>
+        <th nowrap>(本指名数)</th>
+      </tr>
+      <tr>
+        <td colspan="2" align="right">2015/1/1</td>
+        <td colspan="2" align="right">520,000円</td>
+        <td class="cen">20日</td>
+        <td align="right">67(10)人</td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right">2014/12/1</td>
+        <td colspan="2" align="right">670,000円</td>
+        <td class="cen">25日</td>
+        <td align="right">75(36)人</td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right">2014/11/1</td>
+        <td colspan="2" align="right">870,000円</td>
+        <td class="cen">27日</td>
+        <td align="right">55(29)人</td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right">2014/10/1</td>
+        <td colspan="2" align="right">480,000円</td>
+        <td class="cen">15日</td>
+        <td align="right">15(5)人</td>
+      </tr>
+    </table>
+    </div>
+  </div>
+  <!--//contents-->
+</div>
+<!--/wrapper-->
+<div id="emergency"><a onClick="emergency()">Emergency Call (3回タップ)</a></div>
+</body>
+</html>

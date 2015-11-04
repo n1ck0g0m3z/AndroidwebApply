@@ -1,0 +1,285 @@
+@charset "utf-8";
+/* ==================================================
+   COMMON CSS
+================================================== */
+* {
+	xborder:solid 1px #039 !important;
+}
+html {
+	background:#fff;
+}
+body {
+	color: #313131;
+	font-size:14px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	line-height:1.2em;
+	word-break:break-all;
+}
+/* TEXT CLASS
+----------------------------------------*/
+.red {
+	color:#F00;
+}
+.blue {
+	color:#039;
+}
+.bo, strong {
+	font-weight:bold;
+}
+.small{ font-size:.9em; color:#aaa;}
+/* PSEDO CLASS
+----------------------------------------*/
+a {
+	text-decoration: underline;
+	color:#2b97de;
+}
+a.point {
+	background: url(../img/common/icon_arrow04.png) no-repeat center left;
+	padding-left:20px;
+}
+/* COMMON CLASS
+----------------------------------------*/
+.fltrt {
+	float: right;
+}
+.fltlft {
+	float: left;
+}
+/* ==================================================
+   FORM COMMON
+================================================== */
+.btn_center {
+	text-align: center;
+	margin:10px 0;
+}
+img.img_100 {
+	width:100%;
+}
+.required {
+	font-size:9px;
+	font-weight:bold;
+	color:#F30;
+	padding-left:0.5em;
+}
+.err {
+	height:2em;
+	background: #F66;
+	color:#FFF;
+	font-weight:bold;
+	line-height:2.0em;
+	padding:3px 10px;
+	margin:3px 0;
+}
+.sample {
+	color:#666;
+	font-size:0.9em;
+	padding-top:5px;
+}
+.message_box {
+	font-size:11px;
+	text-align: center;
+	color:#666;
+	width:70%;
+	padding:50px 30px;
+	border:solid 1px #999;
+	margin:30px auto;
+	background:#fff;
+}
+/*---- form style ----*/
+input[type="text"], input[type="password"], select {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-size:12px;
+	padding:2px;
+	border:solid 1px #aacfe4;
+}
+textarea {
+	border:solid 1px #aacfe4;
+	padding:2px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+input[type="text"], input[type="password"], {
+ padding:5px;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus, textarea:focus, select:focus, input[type="text"]:hover, input[type="password"]:hover, input[type="file"]:hover, textarea:hover, select:hover {
+	border:1px solid #F99;
+	background:#fadddd;
+}
+.set{
+	margin:0 0 1em 0;
+	padding:.5em;
+	background-color:#eee;
+	}
+label {
+	display:inline-block;
+	padding:0.5em 0;
+	margin:.5em 0;
+	width : 50% ;
+	width : -webkit-calc(50% - 3px) ;
+	width : calc(50% - 3px) ;
+}
+label span {
+	vertical-align:middle;
+	padding:0 0.5em;
+	display:inline-block;
+}
+label input {
+	vertical-align:middle;
+	display:inline-block;
+}
+.wm{
+	width : 100% ;
+	width : -webkit-calc(100% - 4px) ;
+	width : calc(100% - 4px) ;
+	}
+/* ==================================================
+   PAGE NAVIGATION
+================================================== */
+.pagebox {
+	margin:10px 0;
+	height:20px;
+	float:right;
+}
+.pagebox .pagetotal {
+	line-height:20px;
+	margin-right:10px;
+	letter-spacing:0.1em;
+	float:left;
+}
+.pagebox .pagelist {
+	float:left;
+}
+.pagebox .pagelist li {
+	float:left;
+	font-size:12px;
+	line-height:20px;
+	xwidth:20px;
+	text-align:center;
+	padding-left:5px;
+}
+.pagebox .pagelist li a {
+	border:solid 1px #002c53;
+	text-decoration:none;
+	background:#019fbc;
+	display:block;
+	color:#FFF;
+	height:20px;
+	xwidth: auto;
+	padding:0 7px;
+}
+.pagebox .pagelist li a:hover {
+	background:#d9e7ea;
+	color:#333;
+	border:solid 1px #ddd;
+	text-decoration:none;
+	display:block;
+}
+.pagebox .pagelist li.active {
+	font-weight:bold;
+	background:#d9e7ea;
+	border:solid 1px #ddd;
+	margin-left:5px;
+	padding:0 7px;
+}
+/* ==================================================
+   TABLE CLASS
+================================================== */
+/* table_typeH 横タイプ */
+table.table_typeH {
+	border-collapse:collapse;
+	margin:10px auto;
+}
+table.table_typeH th, table.table_typeH td {
+	border:solid 1px #ccc;
+	padding:5px;
+	color:#666;
+}
+table.table_typeH th {
+	text-align:center;
+	background:#f0f0f0;
+	white-space:nowrap;
+}
+table.table_typeH th:first-child {
+	border-left:none;
+}
+table.table_typeH td {
+	background:#fff;
+}
+/* table_typeV 縦タイプ */
+table.table_typeV {
+	border-collapse:collapse;
+	margin:10px auto;
+}
+table.table_typeV th, table.table_typeV td {
+	border:solid 1px #ccc;
+	padding:10px 5px;
+	color:#666;
+}
+table.table_typeV th {
+	background:#f0f0f0;
+	text-align: right;
+	font-size:12px;
+	vertical-align:middle;
+	width:30%;
+	white-space:nowrap;
+}
+table.table_typeV td {
+	background:#fff;
+}
+/* ==================================================
+   BTN
+================================================== */
+.btn {
+	color:#fff;
+	padding:1em 0;
+	display:block;
+	letter-spacing:.2em;
+	text-decoration:none;
+	border-radius:10px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5),-1px -1px 1px rgba(0,0,0,0.3);
+	box-shadow: 1px 1px 1px rgba(000,000,000,0.3);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #ff4d4e), color-stop(0.50, #ff4d4d), color-stop(0.50, #f43434), color-stop(1.00, #fe7b7b));
+background: -webkit-linear-gradient(top, #ff4d4e 0%, #ff4d4d 50%, #f43434 50%, #fe7b7b 100%);
+background: -moz-linear-gradient(top, #ff4d4e 0%, #ff4d4d 50%, #f43434 50%, #fe7b7b 100%);
+background: -o-linear-gradient(top, #ff4d4e 0%, #ff4d4d 50%, #f43434 50%, #fe7b7b 100%);
+background: -ms-linear-gradient(top, #ff4d4e 0%, #ff4d4d 50%, #f43434 50%, #fe7b7b 100%);
+background: linear-gradient(to bottom, #ff4d4e 0%, #ff4d4d 50%, #f43434 50%, #fe7b7b 100%);
+}
+.btn:hover {
+	text-decoration:none;
+}
+
+/* ==================================================
+   clearfix
+================================================== */
+.clear {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.cf:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	overflow:hidden;
+	font-size:0.1em;
+	line-height:0;
+}
+.cf {
+	min-height: 1px;
+}
+* html .cf {
+	height: 1px;/*¥*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+*:first-child+html .cf {
+	zoom: 1;
+} /* IE7 */

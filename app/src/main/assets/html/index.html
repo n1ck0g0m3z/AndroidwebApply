@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Angel Eye-エンジェルアイ-</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="apple-touch-icon" href="img/common/webclip.png" />
+<script type="text/javascript">
+	var date = new Date();
+	var day = date.getDate();
+	var month = date.getMonth()+1;
+	var year = date.getFullYear();
+	var hour = date.getHours()+":"+date.getMinutes();
+	var today = year+"-"+month+"-"+day+" "+hour;
+	
+	function emergency(){ 
+		Android.emergencyCall(today);
+	}
+
+	function enter(){
+		Android.reservation("2015-04-03");
+		/*var view = '<table><tr><td nowrap="nowrap" class="title">現在時刻</td>'+
+		'<td nowrap="nowrap" class="time">'+22：55+'</td></tr><tr>'+
+		'<td nowrap="nowrap" class="title">シャワーまで</td><td nowrap="nowrap" class="time">'
+		+00：35+'</td></tr><tr><td nowrap="nowrap" class="entry_time"><span>入室</span>'+
+		hour+'</td><td nowrap="nowrap" class="finish_time"><span>終了</span>'+
+		23:30+'</td></tr></table>';
+	}
+	function finished(){
+		var view = '<table><tr><td nowrap="nowrap" class="title">現在時刻</td>'+
+		'<td nowrap="nowrap" class="time">'+22：55+'</td></tr><tr>'+
+		'<td nowrap="nowrap" class="title">シャワーまで</td><td nowrap="nowrap" class="time">'
+		+00：35+'</td></tr><tr><td nowrap="nowrap" class="entry_time"><span>入室</span>'+
+		22：30+'</td><td nowrap="nowrap" class="finish_time"><span>終了</span>'+
+		hour+'</td></tr></table>';
+	}
+	function waiting(){
+		var view = '<table><tr><td nowrap="nowrap" class="title">現在時刻</td>'+
+		'<td nowrap="nowrap" class="time">'+22：55+'</td></tr><tr>'+
+		'<td nowrap="nowrap" class="title">シャワーまで</td><td nowrap="nowrap" class="time">'
+		+00：35+'</td></tr><tr><td nowrap="nowrap" class="entry_time"><span>入室</span>'+
+		22：30+'</td><td nowrap="nowrap" class="finish_time"><span>終了</span>'+
+		23:30+'</td></tr></table>';
+	}
+	function longFif(){
+		var view = '<table><tr><td nowrap="nowrap" class="title">現在時刻</td>'+
+		'<td nowrap="nowrap" class="time">'+22：55+'</td></tr><tr>'+
+		'<td nowrap="nowrap" class="title">シャワーまで</td><td nowrap="nowrap" class="time">'
+		+00：35+'</td></tr><tr><td nowrap="nowrap" class="entry_time"><span>入室</span>'+
+		22：30+'</td><td nowrap="nowrap" class="finish_time"><span>終了</span>'+
+		23:30+'</td></tr></table>';
+	}
+	function longThi(){
+		var view = '<table><tr><td nowrap="nowrap" class="title">現在時刻</td>'+
+		'<td nowrap="nowrap" class="time">'+22：55+'</td></tr><tr>'+
+		'<td nowrap="nowrap" class="title">シャワーまで</td><td nowrap="nowrap" class="time">'
+		+00：35+'</td></tr><tr><td nowrap="nowrap" class="entry_time"><span>入室</span>'+
+		22：30+'</td><td nowrap="nowrap" class="finish_time"><span>終了</span>'+
+		23:30+'</td></tr></table>';*/
+	}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <nav id="top_nav">
+      <ul>
+        <li class="states"><a href="states.html"><img src="img/common/icon_states.png" alt="states"></a></li>
+        <li class="logo"><a href="index.html"><img src="img/common/logo.png" alt="logo"></a></li>
+        <li class="tel"><a onClick="Android.call()"><img src="img/common/icon_tel.png" alt="tel"></a></li>
+      </ul>
+    </nav>
+    <nav id="globalNav">
+      <ul>
+        <li><a href="index.html"><img src="img/common/icon_home.png" alt="ステータス"><br>
+          ステータス</a></li>
+        <li><a href="message.html"><img src="img/common/icon_message.png" alt="メッセージ"><br>
+          メッセージ</a></li>
+        <li><a href="map.html"><img src="img/common/icon_map.png" alt="マップ"><br>
+          マップ</a></li>
+        <li><a href="mypage.html"><img src="img/common/icon_mypage.png" alt="マイページ"><br>
+          マイページ</a></li>
+        <li><a href="mail.html" target="_blank"><img src="img/common/icon_mail.png" alt="出勤報告"><br>
+          出勤報告</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--//header-->
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/opacity-rollover2.1.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+  <div id="contents">
+    <div class="states_customer">
+      <div class="box">
+        <p class="name">会員番号：1234<span>鈴木 大地 様</span></p>
+
+        <p class="address">東京都杉並区阿佐谷南1丁目15番1号</p>
+
+        <p class="tel"><a href="tel:184-080-1234-5678">080-1234-5678</a></p>
+
+        <p class="date"><strong>2014/12/15 20:00</strong><br>
+
+          <span>(予約日時：2014/12/10 23:00)</span></p>
+
+        <div id="accodion">
+
+          <div id="states_customerBtn"><a href="#">60分コース詳細</a></div>
+
+          <div id="states_customerDetails">
+
+            <table>
+              <tr>
+                <td nowrap="nowrap" class="details">コース：16,000円<br>
+                  指名：1,000円<br>
+                  交通費：2,000円</td>
+                <td nowrap="nowrap" class="total">19,000円</td>
+              </tr>
+            </table>
+          </div>
+          <!--//states_customer_details-->
+        </div>
+        <div class="btn_states"><a href="states_customer.html">お客様情報</a></div>
+      </div>
+      <!--//states_customer-->
+    </div>
+    <!--//states_customer-->
+    <div id="main_btn">
+      <table>
+        <tr>
+          <td width="50%"><a onClick="enter()"><img src="img/top/btn_entry.png" alt="入室"></a></td>
+          <td colspan="2"><a onClick="finished()"><img src="img/top/btn_out.png" alt="退室"></a></td>
+        </tr>
+        <tr>
+          <td><a onClick="waiting()"><img src="img/top/btn_stop.png" alt="待機"></a></td>
+          <td width="25%"><a onClick="longFif()"><img src="img/top/btn_15.png" alt="延長１５分"></a></td>
+          <td width="25%"><a onClick="longThi()"><img src="img/top/btn_30.png" alt="延長３０分"></a></td>
+        </tr>
+      </table>
+    </div>
+    <!--//main_btn-->
+    <div id="timer">
+    </div>
+  </div>
+  <!--//contents-->
+</div>
+<!--/wrapper-->
+<div id="emergency"><a onClick="emergency()">Emergency Call (3回タップ)</a></div>
+</body>
+</html>

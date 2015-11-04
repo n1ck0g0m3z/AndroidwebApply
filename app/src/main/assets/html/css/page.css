@@ -1,0 +1,254 @@
+@charset "utf-8";
+/*----------------------------------------------------
+ PAGE
+----------------------------------------------------*/
+
+/* message
+----------------------------------------*/
+#btn_messge_fin {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.88, #8e8e8e), color-stop(0.00, #adadad));
+	background: -webkit-linear-gradient(top, #adadad 0%, #8e8e8e 88%);
+	background: -moz-linear-gradient(top, #adadad 0%, #8e8e8e 88%);
+	background: -o-linear-gradient(top, #adadad 0%, #8e8e8e 88%);
+	background: -ms-linear-gradient(top, #adadad 0%, #8e8e8e 88%);
+	background: linear-gradient(to bottom, #adadad 0%, #8e8e8e 88%);
+	border:solid 1px #adadad;
+	border-radius:5px;
+	text-align:center;
+}
+#btn_messge_fin a {
+	display:block;
+	text-decoration:none;
+	color:#fff;
+	line-height:25px;
+	background:url(../img/message/icon_clock.png) 2% center no-repeat;
+	background-size:20px auto;
+}
+#messge_area ul li{
+	position:relative;
+	}
+#messge_area{
+	text-align:left;
+	margin:15px 0;
+	}
+#messge_area ul li:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	overflow:hidden;
+	font-size:0.1em;
+	line-height:0;
+}
+#messge_area ul li div.text{
+	border-radius:10px;
+	padding:10px;
+	display:inline-block;
+	position:relative;
+	}
+
+#messge_area ul li.admin{
+	background:url(../img/message/icon_admin2.png) left 5px no-repeat;
+	background-size:40px auto;
+	padding:10px 60px 5px 60px;
+	}
+#messge_area ul li.admin div.text{
+	border:solid 1px #898989;
+	float:left;
+	}
+#messge_area ul li.admin div.text:before{
+	content:url(../img/message/fukidashi_admin.png);
+	width:18px;
+	height:20px;
+	position:absolute;
+	top:5px;
+	left:-18px;
+	}
+#messge_area ul li.user{
+	background:url(../img/message/icon_user2.png) right 5px no-repeat;
+	background-size:40px auto;
+	padding:10px 60px 5px 60px;
+	}
+#messge_area ul li.user div.text{
+	background-color:#ff9999;
+	color:#fff;
+	float:right;
+	}
+#messge_area ul li.user div.text:before{
+	content:url(../img/message/fukidashi_user.png);
+	width:18px;
+	height:20px;
+	position:absolute;
+	top:5px;
+	right:-18px;
+	}
+
+#messge_area ul li span{
+	font-size:.9em;
+	color:#aaa;
+	text-align:right;
+	margin:0 .5em;
+	display:block;
+	}
+
+#messge_area ul li.admin span{
+	float: left;
+	}
+#messge_area ul li.user span{
+	float:right;
+	}
+
+.last_message{
+	background:#eee;
+	text-align:center;
+	padding:20px 0;
+	font-weight:bold;
+	font-size:1.3em;
+	}
+/* okyakusama joho
+----------------------------------------*/
+#rank_customer {
+	border-top-right-radius:0;
+	border-top-left-radius:0;
+	border-bottom-right-radius:4px;
+	border-bottom-left-radius:4px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #f8c8f9), color-stop(1.00, #ed9b9b));
+	background: -webkit-linear-gradient(#f8c8f9, #ed9b9b);
+	background: -moz-linear-gradient(#f8c8f9, #ed9b9b);
+	background: -o-linear-gradient(#f8c8f9, #ed9b9b);
+	background: -ms-linear-gradient(#f8c8f9, #ed9b9b);
+	background: linear-gradient(#f8c8f9, #ed9b9b);
+	}
+#rank_customer select{
+	background:url(../img/common/icon_coin.png) left center no-repeat;
+	background-size:auto 100%;
+	border:none;
+	padding-left:20%;
+	width : 100% ;
+	height:2em;
+	font-size:20px;
+}
+.memo{
+	border:solid 1px #bdc3c7;
+	border-radius:5px;
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+	margin-bottom:1em;
+	}
+#contents .memo h3{
+	color:#51370f;
+	}
+.memo textarea{
+	margin:.5em 0;
+	}　
+.memo p{
+	margin:.5em 0;
+	}
+.memo .btn_edit{
+	text-align:center;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.88, #c7c7c7), color-stop(0.00, #dedede));
+	background: -webkit-linear-gradient(top, #dedede 0%, #c7c7c7 88%);
+	background: -moz-linear-gradient(top, #dedede 0%, #c7c7c7 88%);
+	background: -o-linear-gradient(top, #dedede 0%, #c7c7c7 88%);
+	background: -ms-linear-gradient(top, #dedede 0%, #c7c7c7 88%);
+	background: linear-gradient(to bottom, #dedede 0%, #c7c7c7 88%);
+	}
+.memo .btn_edit a{
+	display:block;
+	text-align:center;
+	line-height:2em;
+	font-size:1.5em;
+	color:#51370f;
+	text-decoration:none;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5),-1px -1px 1px rgba(0,0,0,0.2);
+	background:url(../img/common/icon_arrow.png) 95% center no-repeat;
+	}
+
+
+
+@charset "UTF-8";
+/*----------------------------------------------------
+ PAGE
+----------------------------------------------------*/
+html{
+	height:100%;
+	}
+body.login{
+	width:100%;
+	height:100%;
+background:#e7eaf1;
+background: -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 120, color-stop(0.87, #e7eaf1), color-stop(0.01, #cad0db));
+background: -webkit-radial-gradient(50% 100%, circle, #cad0db 1%, #e7eaf1 87%);
+background: -moz-radial-gradient(50% 100%, circle, #cad0db 1%, #e7eaf1 87%);
+background: -o-radial-gradient(50% 100%, circle, #cad0db 1%, #e7eaf1 87%);
+background: -ms-radial-gradient(50% 100%, circle, #cad0db 1%, #e7eaf1 87%);
+background: radial-gradient(50% 100%, circle, #cad0db 1%, #e7eaf1 87%);
+	position:relative;
+	display:table;
+}
+.login_box{
+	display:table-cell;
+	vertical-align:middle;
+	}
+.login h1{
+	width:98%;
+	margin:10px auto;
+	}
+.login h1 img{width:100%;}
+.login label{
+	width:100%;
+	color:#e3023e;
+	font-size:16px;
+	line-height:1.8em;
+	font-weight:bold;
+	padding:0;
+	margin:0;
+	}
+.login input[type="text"],
+.login input[type="password"]{
+   width : 98% ;
+   width : -webkit-calc(100% - 12px) ;
+   width : calc(100% - 12px) ;
+   border:solid 1px #e3023e;
+   border-radius:3px;
+   padding:3px 5px;
+   }
+a.btn_login{
+	display:block;
+	width:98%;
+	padding:15px 0;
+	margin:2em auto 0;
+	text-align:center;
+	text-decoration:none;
+	color:#e3023e;
+	font-weight:bold;
+	background: -webkit-gradient(linear, left top, left bottom, 
+	color-stop(1.00, #eecfd2), color-stop(0.00, #ffdee1));
+	background: -webkit-linear-gradient(#ffdee1, #eecfd2);
+	background: -moz-linear-gradient(#ffdee1, #eecfd2);
+	background: -o-linear-gradient(#ffdee1, #eecfd2);
+	background: -ms-linear-gradient(#ffdee1, #eecfd2);
+	background: linear-gradient(#ffdee1, #eecfd2);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Angel Eye-エンジェルアイ-</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/opacity-rollover2.1.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<script>
+function emergency(){ 
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth()+1;
+		var year = date.getFullYear();
+		var hour = date.getHours()+":"+date.getMinutes();
+		var today = year+"-"+month+"-"+day+" "+hour;
+		Android.emergencyCall(today);
+	}
+	var map;
+	//var bool = Android.getCoords();
+	function initialize() {
+		navigator.geolocation.getCurrentPosition(function (position) {   
+			 google.maps.Map.prototype.markers = new Array();                                                           
+			 var latitude = position.coords.latitude;                    
+			 var longitude = position.coords.longitude;                 
+			 var coords = new google.maps.LatLng(latitude, longitude); 
+			 var directionsService = new google.maps.DirectionsService();
+			 var directionsDisplay = new google.maps.DirectionsRenderer();
+			 var dest = "渋谷駅"; 
+			 var mapOptions = //Sets map options
+			 {
+				zoom: 16,
+				center: coords,
+			    mapTypeControl: true, //allows you to select map type eg. map or satellite
+				navigationControlOptions:
+				{
+					 style: google.maps.NavigationControlStyle.SMALL //sets map controls size eg. zoom
+				},
+				   mapTypeId: google.maps.MapTypeId.ROADMAP 
+			};
+			map = new google.maps.Map(document.getElementById("content"),
+				mapOptions);
+				
+			directionsDisplay.setMap(map);
+			//directionsDisplay.setPanel(document.getElementById('panel'));	 
+			
+			marker = new google.maps.Marker();
+			
+			/*var request = {
+			   origin: coords,
+			   destination: dest,
+			   travelMode: google.maps.DirectionsTravelMode.DRIVING
+			 };
+		
+			 directionsService.route(request, function (response, status) {
+			   if (status == google.maps.DirectionsStatus.OK) {
+				 directionsDisplay.setDirections(response);
+			   }
+			 });*/	 
+		});
+		
+		 setInterval(function(){navigator.geolocation.getCurrentPosition(function (position){
+			   			google.maps.Map.prototype.clearMarkers = function() {
+							for (var i = 2; i < this.markers.length; i++) {
+								this.markers[i].setMap(null);
+							}
+							//this.markers = new Array();
+						};
+						
+						var oldSetMap = google.maps.Marker.prototype.setMap;
+						google.maps.Marker.prototype.setMap = function(map) {
+							if (map) {
+								map.markers[2]=(this);
+							}
+							oldSetMap.call(this, map);
+						}
+						
+						map.clearMarkers();
+			   			posLa = position.coords.latitude;
+						posLo = position.coords.longitude;
+						coordsGps = new google.maps.LatLng(posLa,posLo);
+						marker.setPosition(coordsGps);
+						marker.setMap(map);
+						map.panTo(coordsGps);
+			   })},3000);
+	}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <nav id="top_nav">
+      <ul>
+        <li class="states"><a href="states.html"><img src="img/common/icon_states.png" alt="states"></a></li>
+        <li class="logo"><a href="index.html"><img src="img/common/logo.png" alt="logo"></a></li>
+        <li class="tel"><a onClick="Android.call()"><img src="img/common/icon_tel.png" alt="tel"></a></li>
+      </ul>
+    </nav>
+    <nav id="globalNav">
+      <ul>
+        <li><a href="index.html"><img src="img/common/icon_home.png" alt="ステータス"><br>
+          ステータス</a></li>
+        <li><a href="message.html"><img src="img/common/icon_message.png" alt="メッセージ"><br>
+          メッセージ</a></li>
+        <li><a href="map.html"><img src="img/common/icon_map.png" alt="マップ"><br>
+          マップ</a></li>
+        <li><a href="mypage.html"><img src="img/common/icon_mypage.png" alt="マイページ"><br>
+          マイページ</a></li>
+        <li><a href="mail.html" target="_blank"><img src="img/common/icon_mail.png" alt="出勤報告"><br>
+          出勤報告</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--//header-->
+  <div id="content">
+  <!--//contents-->
+</div>
+<!--/wrapper-->
+<div id="emergency"><a onClick="emergency()">Emergency Call (3回タップ)</a></div>
+</body>
+</html>

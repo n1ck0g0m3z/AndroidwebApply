@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Angel Eye-エンジェルアイ-</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function login(){
+		var id = document.form.id.value;
+		var psw = document.form.password.value;
+		if(Android.progress(id,psw)){
+			window.open('index.html','_self');
+		}
+	}
+</script>
+</head>
+<body class="login">
+<div class="login_box" >
+  <div class="inner cf" >
+  <h1><img src="img/common/login.png" alt="Angel Eye-エンジェルアイ-"></h1>
+    <form name="form" onSubmit="login(); return false">
+      <div class="box user_name">
+        <label><span>ID</span>
+        <input type="text" name="id" value=""></label>
+      </div>
+      <div class="box user_name">
+        <label><span>パスワード</span>
+        <input type="password" name="password" value=""></label>
+      </div>
+    </form>
+    <p align="center"><a onClick="login()" class="btn_login">ログイン</a></p>
+  </div>
+</div>
+<!-- //login_box -->
+</body>
+</html>

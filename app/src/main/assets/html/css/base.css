@@ -1,0 +1,231 @@
+@charset "utf-8";
+/* body 1000px
+----------------------------------------*/
+#wrapper {
+	background-color:#fff;
+	margin-bottom:75px;
+}
+/* header
+----------------------------------------*/
+header{
+	background-color:#FFFFFF;
+	z-index:1;
+	position:fixed;
+	top:0;
+	margin-bottom:0;
+	box-shadow:0 0px 15px rgba(0,0,0,0.2);
+	width:100%;
+	}
+/* nav#top_nav */
+header nav#top_nav ul{
+	display:table;
+	width:100%;
+	height:30px;
+	}
+header nav#top_nav ul li{
+	height:45px;
+	text-align:center;
+	display:table-cell;
+	vertical-align:middle;
+	}
+header nav#top_nav ul li.states{
+	width:20%;
+	}
+header nav#top_nav ul li.logo{
+	width:60%;
+	}
+header nav#top_nav ul li.tel{
+	width:20%;
+	}
+header nav#top_nav ul li img{
+	width: auto;
+	height:35px;
+	}
+header nav#top_nav ul li.logo img{
+	height:35px;
+	width:auto;
+	}
+header nav#top_nav ul li a{
+	text-decoration:none;
+	}
+/* nav#globalNav */
+header nav#globalNav ul{
+	display:table;
+	width:100%;
+	}
+header nav#globalNav ul li{
+	width:20%;
+	display:table-cell;
+	vertical-align: baseline;
+	border-bottom:solid 5px #f59393;
+	white-space:nowrap;
+	text-decoration:none;
+	color:#313131;
+	font-size:.8em;
+	text-align:center;
+	}
+header nav#globalNav ul li a{
+	padding:2px;
+	xborder-left:solid 1px #e3e3e3;
+	border-right:solid 1px #e3e3e3;
+	display:block;
+	text-decoration:none;
+	color:#313131;
+	font-size:.8em;
+	text-align:center;
+	background:url(../img/common/bg_gNavi.png) center center no-repeat;
+	background-size:100% 100%;
+	box-shadow:0 0px 15px rgba(0,0,0,0.2);
+	}
+header nav#globalNav ul li img{
+	width: auto;
+	height: auto;
+	max-height:35px;
+	}
+	
+.header2 {
+	position: fixed;
+	height:100px;
+
+}
+/* contents
+----------------------------------------*/
+#content{
+	z-index:0;
+	position:relative;
+	top:110px;
+	padding:.5em 1% 55px;
+	}
+@media (min-height: 300px) {
+      #content {
+        height:395px;
+      }
+    }
+@media (min-height: 800px) {
+      #content {
+        height:665px;
+      }
+    } 
+
+#contents{
+	z-index:0;
+	position:relative;
+	top:110px;
+	padding:.5em 1% 55px;
+	}
+#contents h2{
+	font-size:1.4em;
+	font-weight:bold;
+	color:#e3023e;
+	line-height:1.8em;
+	}
+#contents h3{
+	font-size:1em;
+	font-weight:bold;
+	color:#e3023e;
+	line-height:1.2em;
+	}
+#contents h4{
+	font-size:1.2em;
+	font-weight:bold;
+	color:#313131;
+	line-height:1.2em;
+	}
+.box{
+	margin:0;
+	padding:2%;
+	}
+.box.table{
+	padding:0;
+	margin:1.5em 0;
+	}
+table{
+	width:100%;
+	border-collapse:collapse;
+	}
+table tr th,
+table tr td{
+	vertical-align:middle;
+	padding:5px 7px;
+	}
+table td.cen{
+	text-align:center;
+	}
+table.table_horizon th,
+table.table_horizon td{
+	border:solid 1px #dadada;
+	}
+table.table_horizon th{
+	background-color:#e5e5e5;
+	text-align:center;
+	font-size:0.9em;
+	font-weight:bold;
+	color:#990000;
+	white-space:nowrap;
+	}
+
+
+
+/* bottom
+----------------------------------------*/
+#textMessage{
+	position:fixed;
+	bottom:30px;
+	left:0;
+	width:100%;
+}
+#textMessage input{
+	 outline-style:none;
+	 outline:none;
+	 background-color:#F2F2F2;
+	 border: 0; padding: 7px 0 7px 0; width: 80%;
+}
+#textMessage a{
+	width:20%;
+	padding: 10.75px 0 10.75px 0;
+	position:absolute;
+	right:0px;
+	line-height:50%;
+	text-align:center;
+	color:#fff;
+	font-size:20px;
+	text-decoration:none;
+	background: -webkit-gradient(linear, left top, left bottom, 
+	color-stop(0.88, #8e8e8e), color-stop(0.00, #adadad));
+	background: -webkit-linear-gradient(top, #adadad 0%, #8e8e8e 88%);
+	background: -moz-linear-gradient(top, #adadad 0%, #8e8e8e 88%);
+	background: -o-linear-gradient(top, #adadad 0%, #8e8e8e 88%);
+	background: -ms-linear-gradient(top, #adadad 0%, #8e8e8e 88%);
+	background: linear-gradient(to bottom, #adadad 0%, #8e8e8e 88%);
+}
+#emergency{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	}
+#emergency a{
+	display:block;
+	white-space:nowrap;
+	line-height:50px;
+	text-align:center;
+	color:#fff;
+	font-size:1.5em;
+	text-decoration:none;
+background:#f2c500;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0.88, #ffa220), color-stop(0.83, #f5a31e), color-stop(0.00, #f2c500));
+background: -webkit-linear-gradient(top, #f2c500 0%, #f5a31e 83%, #ffa220 88%);
+background: -moz-linear-gradient(top, #f2c500 0%, #f5a31e 83%, #ffa220 88%);
+background: -o-linear-gradient(top, #f2c500 0%, #f5a31e 83%, #ffa220 88%);
+background: -ms-linear-gradient(top, #f2c500 0%, #f5a31e 83%, #ffa220 88%);
+background: linear-gradient(to bottom, #f2c500 0%, #f5a31e 83%, #ffa220 88%);
+	}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Angel Eye-エンジェルアイ-</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function emergency(){ 
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth()+1;
+		var year = date.getFullYear();
+		var hour = date.getHours()+":"+date.getMinutes();
+		var today = year+"-"+month+"-"+day+" "+hour;
+		Android.emergencyCall(today);
+	}
+	function load(){
+		var history = Android.msgHistory();
+		history = JSON.parse(history);
+		var view = document.getElementById("space").innerHTML;
+		
+		for(var i=0; i<history.length ; i++){
+			var test = history[i]
+			if(test.type=="self"){
+				view += '<li class="user"><div class="text">'+test.message
+				+'</div><span>'+test.time+'<br>&nbsp;既読</span></li>' ;
+			}else{
+				view += '<li class="admin"><div class="text">'+test.message
+				+'</div><span>'+test.time+'<br>&nbsp;</span></li>' ;
+			}
+		}
+		document.getElementById("space").innerHTML = view;
+		window.scrollTo(0,document.body.scrollHeight);
+	}
+</script>
+</head>
+<body onLoad="load()">
+<div id="wrapper">
+  <header style="box-shadow:none">
+    <nav id="top_nav">
+      <ul>
+        <li class="states"><a href="states.html"><img src="img/common/icon_states.png" alt="states"></a></li>
+        <li class="logo"><a href="index.html"><img src="img/common/logo.png" alt="logo"></a></li>
+        <li class="tel"><a onClick="Android.call()"><img src="img/common/icon_tel.png" alt="tel"></a></li>
+      </ul>
+    </nav>
+    <nav id="globalNav">
+      <ul>
+        <li><a href="index.html"><img src="img/common/icon_home.png" alt="ステータス"><br>
+          ステータス</a></li>
+        <li><a href="message.html"><img src="img/common/icon_message.png" alt="メッセージ"><br>
+          メッセージ</a></li>
+        <li><a href="map.html"><img src="img/common/icon_map.png" alt="マップ"><br>
+          マップ</a></li>
+        <li><a href="mypage.html"><img src="img/common/icon_mypage.png" alt="マイページ"><br>
+          マイページ</a></li>
+        <li><a href="mail.html" target="_blank"><img src="img/common/icon_mail.png" alt="出勤報告"><br>
+          出勤報告</a></li>
+      </ul>
+    </nav>
+    <div style="padding:3px 1% 0">
+     <div id="btn_messge_fin"><a onClick="over()">受付終了</a></div>
+    </div>
+  </header>
+  <!--//header-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/opacity-rollover2.1.js"></script>
+<script type="text/javascript">
+		function over(){
+			var date = new Date();
+			var day = date.getDate();
+			var month = date.getMonth()+1;
+			var year = date.getFullYear();
+			var hour = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds(); 
+			var today = year+"-"+month+"-"+day+" "+hour;
+			var view = document.getElementById("space").innerHTML;
+			view += '<li><div class="last_message">本日の業務は終了いたしました。</div><span>'
+			+today+'</span></li>';
+		  	document.getElementById("space").innerHTML = view;
+			window.scrollTo(0,document.body.scrollHeight);
+			Android.sendOver("本日の業務は終了いたしました。",hour);
+		}
+		function admMsg(msg){
+			var view = document.getElementById("space").innerHTML;
+			var sns = String(msg);
+			view += '<li class="admin"><div class="text">'+sns+'</div><span>20:20<br>&nbsp;</span></li>'
+			document.getElementById("space").innerHTML = view;
+			window.scrollTo(0,document.body.scrollHeight);
+		}
+		function send(){
+			var date = new Date();
+			var day = date.getDate();
+			var month = date.getMonth()+1;
+			var year = date.getFullYear();
+			var hour = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds(); 
+			var today = year+"-"+month+"-"+day+" "+hour;
+			var sendM = document.form01.input01.value;
+			var view = document.getElementById("space").innerHTML;
+			view += '<li class="user"><div class="text">'+sendM+'</div><span>20:20<br>&nbsp;既読</span></li>'
+			window.scrollTo(0,document.body.scrollHeight);
+			document.getElementById("space").innerHTML = view;
+			document.form01.input01.value = "";
+			Android.sendMsg(sendM, today);
+		}
+</script>
+  <div id="contents" style="position:relative;	top:120px;">
+      <div id="messge_area">
+        <ul>
+            <div id="space"></div>
+        </ul>
+      </div>
+      
+  </div>
+  <!--//contents-->
+</div>
+<!--/wrapper-->
+<form action="send()" name="form01" id="textMessage" onSubmit="send(); return false">
+      <input type="text"  name="input01" autocomplete="off" />
+      <a onClick="send()" >Send</a>
+</form>
+<div id="emergency"><a onClick="emergency()" style="line-height:30px">Emergency Call (3回タップ)</a></div>
+</body>
+</html>

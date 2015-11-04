@@ -1,0 +1,10 @@
+AddDefaultCharset UTF-8
+AddType application/x-httpd-php .php .html
+
+DirectoryIndex index.html top.php
+
+Options +Includes
+AddType application/x-httpd-php html
+AddOutputFilter INCLUDES .html
+
+RewriteEngine off
